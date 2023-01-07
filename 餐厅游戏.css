@@ -3,12 +3,11 @@
     padding: 0;
     box-sizing: inherit;
 }
-
+/* 背景图设置 */
 body {
     background-image: url('./background.jpg');
     background-position: top center;
     background-size: cover;
-    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,16 +16,13 @@ body {
 }
 
 .zhujiemian {
-    /* position: relative; */
     height: 100%;
     width: 100%;
 }
 
+/* W1 D1 和 收入框 */
 .dingbu {
-    /* background-color: antiquewhite; */
     box-sizing: border-box;
-    /* display: inline-flex;
-    justify-content: space-between; */
     display: inline-block;
     height: 10vh;
     width: 100%;
@@ -34,12 +30,9 @@ body {
     margin-bottom: 1vh;
 }
 
+/* W1 D1*/
 .weekend {
-    /* background: linear-gradient(180deg, #ffe699 50%, #ffd24d 50%); */
     border-radius: 45px;
-    /* display: inline-flex;
-    justify-content: center;
-    align-items: center; */
     display: inline-block;
     width: 30%;
     padding-left: 2.5vh;
@@ -48,18 +41,15 @@ body {
 
 .weekend span {
     color: #8c6900;
-    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .weekend span:first-child {
     margin-right: 20%;
 }
 
+/* 收入 */
 .shouru {
-    /* background: linear-gradient(180deg, #ffe699 50%, #ffd24d 50%); */
     border-radius: 45px;
-    /* display: flex;
-    align-items: center; */
     display: inline-block;
     transform: translate(40%,0);
     text-align: right;
@@ -71,11 +61,10 @@ body {
     margin-left: auto;
     margin-right: 10%;
     color: #8c6900;
-    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+/* 厨师div */
 .cook {
-    /*height: 20vh;*/ 
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -84,9 +73,9 @@ body {
     margin: 0 auto;
     margin-bottom: 15vh;
     border: 5px solid white;
-    /* background-color:darkorchid; */
 }
 
+/* 厨师 */
 .chef {
     display: flex;
     align-items: center;
@@ -111,6 +100,7 @@ body {
     width: 100%;
 }
 
+/* js部分（厨师做菜时的图片处理） */
 .cookFood {
     position: absolute;
     top: 75%;
@@ -121,8 +111,8 @@ body {
     color: white;
     border: 3px solid white;
     border-radius: 5px;
-    background-color:blueviolet
 }
+/*  */
 
 .fireCooker {
     display: block;
@@ -157,6 +147,7 @@ body {
     width: 70%;
 }
 
+/* 桌子部分 */
 .table {
     position: relative;
     height: 40vh;
@@ -164,7 +155,6 @@ body {
     margin: 0 auto;
     border: 6px solid white;
     border-radius: 20px;
-    /* background-color: #ffa64d; */
 }
 
 .table-firstRow {
@@ -313,20 +303,24 @@ body {
     width: 22%;
 }
 
-.welcome,
-.welcome02 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* js部分（顾客等待时的图片处理） */
+.customer-icon {
+    height: 90%;
+    width: 90%;
+    border: 5px solid white;
+    border-radius: 50%;
+    background: linear-gradient(90deg,#006dd9 50%, #2693ff 50%);
+}
+/*  */
+
+.customer-icon img {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 3;
+    top: -7%;
+    left: -7%;
+    width: 120%;
 }
 
+/* 顾客等待部分 */
 .waitdiv {
     display: flex;
     position: fixed;
@@ -342,36 +336,9 @@ body {
     width: 20vw;
     margin-left: -15px;    
     margin-right: 1vw;
-    /* transition: all 200ms ease-in;
-    animation: flyin 500ms ease-in forwards; */
 }
 
-/* @keyframes flyin {
-    from {
-        right: -20rem;
-        opacity: 0;
-    }
-    to {
-        right: 0;
-        opacity: 1;
-    }
-} */
-
-.customer-icon {
-    height: 90%;
-    width: 90%;
-    border: 5px solid white;
-    border-radius: 50%;
-    background: linear-gradient(90deg,#006dd9 50%, #2693ff 50%);
-}
-
-.customer-icon img {
-    position: absolute;
-    top: -7%;
-    left: -7%;
-    width: 120%;
-}
-
+/* 顾客等待进度条 */
 .waiting-text {
     position: absolute;
     top: 85%;
@@ -385,40 +352,22 @@ body {
     background: linear-gradient(90deg, #2693ff 0%, #006dd9 0, #006dd9 100%);
 }
 
-.center_alert {
-    display: none;
-    position: absolute;
-    top: 46%;
-    width: 50%;
-    left: 18%;
+/* 欢迎窗口 */
+.welcome,
+.welcome02 {
+    display: flex;
     justify-content: center;
-    background-color: #ffb399;
-    border: 6px solid white;
-    border-radius: 15px;
-    font-size: 13px;
-    padding: 0.8em 1.5em;
-    color: #8c6800;
-    font-weight: 500;
-    animation: fadein 200ms ease-in forwards;
-    z-index: 100;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
 }
 
-/* @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}  */
-
-.center_alert p,
-#center_alert_p {
-    width: 110%;
-    margin-left: -3%;
-    line-height: 1.5em;
-}
-
+/* 欢迎窗口的信息 */
 .xingxi {
     display: flex;
     flex-direction: column;
@@ -455,6 +404,7 @@ body {
     color:peru;
 }
 
+/* 欢迎窗口的开始按钮 */
 .xingxi .start {
     height: 20%;
     width: 90%;
@@ -477,8 +427,35 @@ body {
     background: linear-gradient(180deg, #e6d08c 50%, #d9b342 50%);
 }
 
+/* 各种提示窗口 */
+.center_alert {
+    display: none;
+    position: absolute;
+    top: 46%;
+    width: 50%;
+    left: 18%;
+    justify-content: center;
+    background-color: #ffb399;
+    border: 6px solid white;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 0.8em 1.5em;
+    color: #8c6800;
+    font-weight: 500;
+    animation: fadein 200ms ease-in forwards;
+    z-index: 100;
+}
+
+.center_alert p,
+#center_alert_p {
+    width: 110%;
+    margin-left: -3%;
+    line-height: 1.5em;
+}
+
+
+/* 菜单部分 */
 .menudiv {
-    /* display: block; */
     display: none;
     height: 100vh;
     width: 100vw;
@@ -502,6 +479,7 @@ body {
     flex-direction: column;
 }
 
+/* 顾客头像处理 */
 .menu .customer {
     position: absolute;
     top: -2em;
@@ -521,6 +499,7 @@ body {
     width: 120%;
 }
 
+/* 谁在点菜 */
 .menu .title {
     margin-top: 1em;
     margin-left: auto;
@@ -529,6 +508,7 @@ body {
     color: #513a00;
 }
 
+/* 菜单主体 */
 .menu .form {
     display: flex;
     align-items: center;
@@ -541,6 +521,38 @@ body {
     background-color: white;
 }
 
+/* 凉菜 主菜 饮料字样 */
+.menu h3 {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#menu_form:first-child {
+    margin-top: 0;
+}
+
+.menu #menu_form {
+    line-height: 1.5em;
+    font-size: 0.8em;
+    margin-top: -2em;
+    color: #8c6600;
+}
+
+/* 菜单信息 */
+.menu .menu_item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.menu .menu_item span {
+    margin: 0 1em;
+}
+
+/* 上菜或不点了 */
 .queren {
     display: flex;
     justify-content: space-between;
@@ -573,31 +585,3 @@ body {
     width: 25%;
 }
 
-.menu h3 {
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-#menu_form:first-child {
-    margin-top: 0;
-}
-
-.menu #menu_form {
-    line-height: 1.5em;
-    font-size: 0.8em;
-    margin-top: -2em;
-    color: #8c6600;
-}
-
-.menu .menu_item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 5%;
-}
-
-.menu .menu_item span {
-    margin: 0 1em;
-}
