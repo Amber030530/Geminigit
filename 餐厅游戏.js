@@ -265,19 +265,19 @@ window.onload = function(){
         let div_waiting = document.createElement("div");
         if(id!=0){
             div_waiting.innerHTML = "<div class=\"customer-icon\">\n" +
-            "                    <img src=\"./customer" + id_temp + ".png\">\n" +
-            "                </div>\n" +
-            "                <div class=\"waiting-text\" id=\"waiting-text" + id_temp + "\">\n" +
-            "                    等位中\n" +
-            "                </div>";
+            "   <img src=\"./customer" + id_temp + ".png\">\n" +
+            "</div>\n" +
+            "<div class=\"waiting-text\" id=\"waiting-text" + id_temp + "\">\n" +
+            "   等位中\n" +
+            "</div>";
         }
         else{
             div_waiting.innerHTML = "<div class=\"customer-icon\">\n" +
-            "                    <img src=\"./boss.png\">\n" +
-            "                </div>\n" +
-            "                <div class=\"waiting-text\" id=\"waiting-text" + id_temp + "\">\n" +
-            "                    等位中\n" +
-            "                </div>";
+            "   <img src=\"./boss.png\">\n" +
+            "</div>\n" +
+            "<div class=\"waiting-text\" id=\"waiting-text" + id_temp + "\">\n" +
+            "   等位中\n" +
+            "</div>";
         }
         div_waiting.className = "waiting";//设置class
         div_waiting.id = "waiting" + id_temp;//设置id
